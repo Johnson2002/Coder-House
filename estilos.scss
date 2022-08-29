@@ -1,12 +1,11 @@
-@charset "UTF-8";
-
 * {
     margin: 0;
     padding: 0;
 }
 
 html {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 body {
@@ -23,27 +22,27 @@ body {
     height: 150px;
     align-items: center;
     padding: 30px;
-}
 
-.header .title_index {
-    font-family: "Lobster", cursive;
-    font-weight: bolder;
-    color: white;
-    text-shadow: 0 0 5px white;
-    animation-name: aparecer;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-}
+    .title_index {
+        font-family: 'Lobster', cursive;
+        font-weight: bolder;
+        color: white;
+        text-shadow: 0 0 5px white;
+        animation-name: aparecer;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
 
-.header .title_index::after {
-    content: " 🥃 ";
-}
-
-.header .nav {
-    gap: 10px;
-    animation-name: aparecer;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
+    .title_index::after {
+        content: " 🥃 ";
+    }
+    
+    .nav {
+        gap: 10px;
+        animation-name: aparecer;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
 }
 
 #catalogo {
@@ -62,7 +61,7 @@ body {
     color: white;
     border: white 1px solid;
     padding: 10px;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     transform: scale(1.1);
     font-style: italic;
 }
@@ -83,7 +82,7 @@ body {
     color: white;
     border: white 1px solid;
     padding: 10px;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     transform: scale(1.1);
     font-style: italic;
 }
@@ -104,7 +103,7 @@ body {
     color: white;
     border: white 1px solid;
     padding: 10px;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     transform: scale(1.1);
     font-style: italic;
 }
@@ -125,10 +124,11 @@ body {
     color: white;
     border: white 1px solid;
     padding: 10px;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     transform: scale(1.1);
     font-style: italic;
 }
+
 
 #home {
     color: black;
@@ -146,7 +146,7 @@ body {
     color: white;
     border: white 1px solid;
     padding: 10px;
-    transition: all 0.3s ease;
+    transition: all .3s ease;
     transform: scale(1.1);
     font-style: italic;
 }
@@ -163,21 +163,22 @@ body {
     animation-name: aparecer;
     animation-duration: 2s;
     animation-iteration-count: 1;
-}
 
-.container .cards {
-    justify-content: space-around;
-    color: white;
-    background-size: cover;
-    background-color: black;
-    box-shadow: 10px 10px 5px black;
-    width: 100%;
-    height: auto;
-}
+    .cards {
+        justify-content: space-around;
+        color: white;
+        background-size: cover;
+        background-color: black;
+        box-shadow: 10px 10px 5px black;
+        width: 100%;
+        height: auto;
+    }
 
-.container .cards:hover {
-    transition: all 0.3s ease;
-    transform: scale(1.2);
+    .cards:hover {
+        transition: all .3s ease;
+        transform: scale(1.2);
+    }
+    
 }
 
 .conteinerfooter {
@@ -191,11 +192,12 @@ body {
     padding: 1rem;
     margin-top: 150px;
     gap: 20px;
+
+    a {
+        color: black;
+    }
 }
 
-.conteinerfooter a {
-    color: black;
-}
 
 @keyframes aparecer {
     0% {
@@ -206,5 +208,3 @@ body {
         opacity: 1;
     }
 }
-
-/*# sourceMappingURL=estilos.css.map */
