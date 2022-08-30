@@ -6,7 +6,7 @@
 /*Fuente*/
 html {
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 
 body {
@@ -35,8 +35,8 @@ body {
     animation-iteration-count: 1;
 }
 
-.title_index::after{
-    content: "🥃";
+.title_index::after {
+    content: " 🥃";
 }
 
 .nav {
@@ -152,9 +152,9 @@ body {
     align-items: center;
     padding-bottom: 30px;
     padding-top: 30px;
-    flex-flow: column nowrap; 
-    gap: 25px;  
-    height: auto; 
+    flex-flow: column nowrap;
+    gap: 25px;
+    height: auto;
     margin-top: 100px;
     animation-name: aparecer;
     animation-duration: 2s;
@@ -172,10 +172,9 @@ body {
 }
 
 .cards:hover {
-    width: 200%;
-    transition: width 1s ease;
+    transform: scale(1.2);
+    transition: all 1s ease-in-out;
 }
-
 
 .conteinerfooter {
     display: flex;
@@ -242,7 +241,7 @@ body {
     border-radius: 20px;
 }
 
-.parrafos p{
+.parrafos p {
     text-align: left;
     color: black;
     border: 2px solid black;
@@ -277,7 +276,7 @@ body {
     font-size: 25px;
 }
 
-.h4Americana:hover{
+.h4Americana:hover {
     background-image: url(images/united_states_flag.png);
     background-size: cover;
     animation-name: aparecer;
@@ -337,22 +336,24 @@ body {
 }
 
 .tablas {
-   display: flex;
-   flex-flow: row nowrap;
-   justify-content: space-around;
-   justify-items: center;
-   margin-bottom: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    justify-items: center;
+    margin-bottom: 20px;
 }
 
-th, tr, td {
-   color: black;
-   background-color: coral;
-   padding: 2%;
-   border: 2px solid black;
+th,
+tr,
+td {
+    color: black;
+    background-color: coral;
+    padding: 2%;
+    border: 2px solid black;
 }
 
 .footerCatalogo {
-    background-color:#2D5731;
+    background-color: #2D5731;
     color: white;
     text-align: center;
     padding: 2rem;
@@ -429,12 +430,12 @@ th, tr, td {
 }
 
 #h4Tragos:hover {
-    box-shadow: 10px 20px  rgba(0, 0, 0, 0.355);
+    box-shadow: 10px 20px rgba(0, 0, 0, 0.355);
     transition: box-shadow 0.3s ease;
 }
 
 
-.tragos--{
+.tragos-- {
     color: white;
     display: flex;
     flex-flow: column nowrap;
@@ -467,6 +468,13 @@ th, tr, td {
     color: black;
 }
 
+.footerTragos {
+    background-color: #2D5731;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
 
 /*___CONTACTANOS___*/
 
@@ -480,7 +488,7 @@ th, tr, td {
     align-items: center;
 }
 
-.title_contactanos{
+.title_contactanos {
     color: white;
     font-weight: bolder;
     font-style: italic;
@@ -530,6 +538,10 @@ th, tr, td {
 
 .footerContact {
     margin-top: 210px;
+    background-color: #2D5731;
+    color: white;
+    text-align: center;
+    padding: 2rem;
 }
 
 .gmail {
@@ -557,7 +569,8 @@ textarea {
     color: white;
     box-shadow: 2px 2px 5px black;
     font-weight: bolder;
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
+    ;
     background-color: black;
     padding: 5px;
     border: white solid 2px;
@@ -625,6 +638,10 @@ fieldset {
 
 .footerAbout {
     margin-top: 70px;
+    background-color: #2D5731;
+    color: white;
+    text-align: center;
+    padding: 2rem;
 }
 
 .footerAbout a {
@@ -633,7 +650,7 @@ fieldset {
 
 
 @media all and (max-width: 467px) and (min-width: 466px) {
-    .header  {
+    .header {
         padding: 20px;
         height: 100%;
         justify-content: center;
@@ -670,29 +687,29 @@ fieldset {
 }
 
 @media all and (min-width: 720px) {
-   .header {
+    .header {
         height: 100%;
         justify-content: space-between;
-   }
+    }
 
-   .main {
+    .main {
         height: 100px;
         justify-content: space-between;
-   }
+    }
 
-   .headerTragos {
+    .headerTragos {
         height: 100px;
         justify-content: space-between;
     }
 
     .headerContact {
-         height: 100px;
-         justify-content: space-between;
+        height: 100px;
+        justify-content: space-between;
     }
 
     .headerAbout {
         height: 100px;
-        justify-content: space-between;   
+        justify-content: space-between;
     }
 
     .container {
@@ -701,12 +718,12 @@ fieldset {
         justify-content: space-around;
         padding-bottom: 30px;
         padding-top: 30px;
-        flex-flow: row nowrap; 
+        flex-flow: row nowrap;
         gap: 25px;
         width: 100%;
     }
 
-    
+
 }
 
 @keyframes aparecer {
