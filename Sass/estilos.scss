@@ -1,0 +1,744 @@
+@mixin titles-size-style {
+    font-size: 3rem;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.716);
+    margin-left: 30px;
+    font-weight: lighter;
+}
+
+/*Backgrounds-colors_________*/
+$backgroundColors: ("claro": #D92525,
+    "oscuro": #260101,
+    "blanco": #F2F2F2,
+    "azul-oscuro": #044040,
+    "Rojo-claro":#F23030,
+);
+/*Backgrounds-colors_________*/
+
+/*Fuentes____________________*/
+$FontsFamilys: ("Alumini Sans": 'Alumni Sans Pinstripe',
+    "Roboto mono": 'Roboto Mono',
+    "Aboreto": 'Aboreto',
+    "Kanit": 'Kanit',
+);
+/*Fuentes____________________*/
+
+/*colors_____________________*/
+$Colors: ("blanco": white,
+    "negro": black,
+    "Rojo": #BD2A2E,
+    "gris": #3B3936,
+);
+/*colors_____________________*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background: map-get($backgroundColors, "blanco");
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: map-get($backgroundColors, "claro");
+    height: 150px;
+    align-items: center;
+    padding: 30px;
+
+    .title_index {
+        @include titles-size-style();
+        font-family: map-get($FontsFamilys, "Aboreto");
+        color: map-get($Colors, "blanco");
+        animation-name: aparecer;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
+
+    .nav {
+        gap: 10px;
+        animation-name: aparecer;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
+
+
+}
+
+#catalogo {
+    color: map-get($Colors, "negro");
+    text-decoration: none;
+    background: map-get($backgroundColors, "blanco");
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px black;
+}
+
+#catalogo:hover {
+    background: map-get($backgroundColors, "Rojo-claro");
+    color: map-get($Colors, "blanco");
+    border: white 3px solid;
+    padding: 10px;
+    transition: all .3s ease;
+    font-style: italic;
+    box-shadow: 10px 10px 0 black;
+}
+
+#tragos {
+    color: map-get($Colors, "negro");
+    text-decoration: none;
+    background: map-get($backgroundColors, "blanco");
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px black;
+}
+
+#tragos:hover {
+    background: map-get($backgroundColors, "Rojo-claro");
+    color: map-get($Colors, "blanco");
+    border: white 3px solid;
+    padding: 10px;
+    transition: all .3s ease;
+    font-style: italic;
+    box-shadow: 10px 10px 0 black;
+}
+
+#contactanos {
+    color: map-get($Colors, "negro");
+    text-decoration: none;
+    background: map-get($backgroundColors, "blanco");
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px black;
+}
+
+#contactanos:hover {
+    background: map-get($backgroundColors, "Rojo-claro");
+    color: map-get($Colors, "blanco");
+    border: white 3px solid;
+    padding: 10px;
+    transition: all .3s ease;
+    font-style: italic;
+    box-shadow: 10px 10px 0 black;
+}
+
+#aboutus {
+    color: map-get($Colors, "negro");
+    text-decoration: none;
+    background: map-get($backgroundColors, "blanco");
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px black;
+}
+
+#aboutus:hover {
+    background: map-get($backgroundColors, "Rojo-claro");
+    color: map-get($Colors, "blanco");
+    border: white 3px solid;
+    padding: 10px;
+    transition: all .3s ease;
+    font-style: italic;
+    box-shadow: 10px 10px 0 black;
+}
+
+
+#home {
+    color: map-get($Colors, "negro");
+    text-decoration: none;
+    background: map-get($backgroundColors, "blanco");
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px black;
+
+}
+
+#home:hover {
+    background: map-get($backgroundColors, "Rojo-claro");
+    color: map-get($Colors, "blanco");
+    border: white 3px solid;
+    padding: 10px;
+    transition: all .3s ease;
+    font-style: italic;
+    box-shadow: 10px 10px 0 black;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    flex-flow: column nowrap;
+    gap: 25px;
+    height: auto;
+    margin-top: 100px;
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+
+    .cards {
+        font-family: map-get($FontsFamilys , "Kanit" );
+        justify-content: space-around;
+        color: map-get($Colors, "blanco" );
+        background-size: cover;
+        background-color: map-get($backgroundColors, "azul-oscuro" );
+        box-shadow: 10px 10px 5px black;
+        width: 100%;
+        height: auto;
+    }
+
+    .cards:hover {
+        transform: scale(1.2);
+        transition: all 1s ease-in-out;
+    }
+}
+
+.conteinerfooter {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    background: map-get($backgroundColors, "azul-oscuro");
+    color: map-get($Colors, "blanco");
+    font-size: 200;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 150px;
+    gap: 20px;
+}
+
+.conteinerfooter a {
+    color: map-get($Colors, "negro");
+}
+
+/*Tragos___________*/
+.bodyTragos {
+    background: map-get($backgroundColors, "blanco");
+    margin: 0;
+}
+
+.headerTragos {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background: map-get($backgroundColors, "claro");
+    height: 150px;
+    align-items: center;
+
+    .title_tragos {
+        @include titles-size-style();
+        color: map-get($Colors, "blanco");
+        font-family: map-get($FontsFamilys, "Aboreto");
+    }
+
+}
+
+.nav {
+    gap: 10px;
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.mainTitle {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#h1Tragos {
+    text-align: center;
+    background: map-get($backgroundColors, "Rojo-claro");
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 1rem;
+    color: map-get($Colors, "blanco");
+    text-shadow: 0px 0px 5px gray;
+}
+
+#h1Tragos:hover {
+    box-shadow: 5px 5px rgb(72, 72, 72);
+    transition: box-shadow .3s ease;
+}
+
+#h4Tragos {
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem;
+    align-items: center;
+    font-size: 30px;
+    background: map-get($backgroundColors, "Rojo-claro");
+    border: white solid 2px;
+    color: map-get($Colors, "blanco");
+    border-radius: 20px;
+    text-shadow: 0px 0px 5px rgb(72, 72, 72);
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.tragos-- {
+    font-weight: bolder;
+    font-family: map-get($FontsFamilys, "Alumini Sans" );
+    background: map-get($backgroundColors, "claro");
+    color: map-get($Colors, "blanco");
+    margin: 15px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 20px;
+
+    .subTitle {
+        font-family: map-get($FontsFamilys, "Kanit");
+        color: map-get($Colors, "blanco");
+        display: inline;
+        background: map-get($backgroundColors, "oscuro");
+        margin: 15px;
+        border: 1px solid white;
+        border-radius: 5px;
+
+    }
+
+    .ulT .liT {
+        background: map-get($backgroundColors, "azul-oscuro");
+        list-style: none;
+        color: map-get($Colors, "blanco");
+        text-align: center;
+        padding: 10px;
+        font-weight: bolder;
+    }
+}
+
+.footerTragos {
+    background: map-get($backgroundColors, "azul-oscuro");
+    color: map-get($Colors, "blanco");
+    text-align: center;
+    padding: 2rem;
+}
+
+.footerTragos a {
+    color: map-get($Colors, "negro");
+}
+/*Tragos___________*/
+
+/*Contactanos______*/
+.bodyContact {
+    background: map-get($backgroundColors, "blanco");
+    margin: 0;
+}
+
+.headerContact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: map-get($backgroundColors, "claro");
+    height: 150px;
+    align-items: center;
+
+    .title_contactanos {
+        @include titles-size-style();
+        color: map-get($Colors, "blanco");
+        font-family: map-get($FontsFamilys, "Aboreto");
+    }
+
+}
+
+.mainContactanos {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    .h1Contact {
+        text-align: center;
+        padding: 1rem;
+        margin: 2rem;
+        font-size: 30px;
+        background: map-get($backgroundColors, "Rojo-claro");
+        border: white solid 2px;
+        color: map-get($Colors, "blanco");
+        border-radius: 20px;
+        text-shadow: 0px 0px 5px white;
+        animation-name: aparecer;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
+}
+
+.sectContact {
+    margin-top: 2rem;
+    display: grid;
+    grid-column: 1fr 2fr 3fr 4fr;
+    color: map-get($Colors, "negro");
+
+    #form {
+        text-align: center;
+    }
+
+    .gmail {
+        margin-left: 19px;
+    }
+
+    .coment {
+        display: block;
+        text-align: center;
+    }
+
+    textarea {
+        resize: none;
+        width: 55%;
+    }
+
+    .text {
+        background: map-get($backgroundColors, "Rojo-claro");
+        padding: 10px;
+        border-radius: 5px;
+        color: map-get($Colors, "blanco");
+    }
+
+    #button {
+        color: map-get($Colors, "blanco");
+        font-weight: bolder;
+        font-family: map-get($FontsFamilys, "Aborat Mono");
+        background: map-get($backgroundColors, "oscuro");
+        padding: 5px;
+        border: white solid 2px;
+        border-radius: 5px;
+    }
+
+    #button:hover {
+        transform: scale(1.2);
+        background: map-get($backgroundColors, "Rojo-claro");
+        color: map-get($Colors, "blanco");
+        transition: 0.3s ease;
+        box-shadow: 5px 2px 0px gray;
+    }
+}
+
+.footerContact {
+    margin-top: 150px;
+    background: map-get($backgroundColors, "azul-oscuro");
+    color: map-get($Colors, "blanco");
+    text-align: center;
+    padding: 2rem;
+}
+
+.footerContact a {
+    color: map-get($Colors, "negro");
+}
+
+/*Contactanos______*/
+
+/*Catalago_________*/
+.bodyCatalogo {
+    background: map-get($backgroundColors, "blanco");
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: map-get($backgroundColors, "claro");
+    height: 200px;
+    align-items: center;
+    padding: 20px;
+
+    .title_catalogo {
+        @include titles-size-style();
+        color: map-get($Colors, "blanco");
+        font-family: map-get($FontsFamilys, "Aboreto");
+    }
+
+}
+
+.container_ {
+    text-align: center;
+    background: map-get($backgroundColors, "Rojo-claro");
+    color: map-get($Colors, "blanco");
+    font-style: italic;
+    text-shadow: 0px 0px 5px rgb(72, 72, 72);
+    box-shadow: 10px 10px 0px black;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.parrafos p {
+    text-align: left;
+    color: map-get($Colors, "blanco");
+    border: 2px solid black;
+    margin: 20px;
+    background: map-get($backgroundColors, "claro");
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.parrafos li {
+    display: flex;
+    width: fit-content;
+    padding: 5px;
+    background-color: #8EC5FC;
+    color: black;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.h4Americana {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: map-get($Colors, "blanco");
+    background: map-get($backgroundColors, "oscuro");
+    padding: 20px;
+    width: fit-content;
+    margin: 20px;
+    font-size: 25px;
+}
+
+.h4Americana:hover {
+    color: map-get($Colors, "negro");
+    background-image: url(../images/united_states_flag.png);
+    transition: all .3s ease;
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.h4Escosesa {
+    color: map-get($Colors, "blanco");
+    background: map-get($backgroundColors, "oscuro");
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    transition: background-image 2s ease;
+    width: fit-content;
+    margin: 20px;
+}
+
+.h4Escosesa:hover {
+    color: map-get($Colors, "negro");
+    background-image: url(../images/scothis_flag.jpg);
+    background-size: cover;
+    transition: all .3s ease;
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.h4Irlandesa {
+    color: map-get($Colors, "blanco");
+    background: map-get($backgroundColors, "oscuro");
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    width: fit-content;
+    margin: 20px;
+}
+
+.h4Irlandesa:hover {
+    color: map-get($Colors, "negro");
+    transition: all .3s ease;
+    background-image: url(../images/irish_flag.png);
+    background-size: cover;
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+#Precios {
+    text-align: center;
+    color: map-get($Colors, "blanco");
+    background: map-get($backgroundColors, "azul-oscuro");
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 15px;
+    text-shadow: 0px 0px 5px rgb(72, 72, 72);
+}
+
+.tablas {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    justify-items: center;
+    margin-bottom: 20px;
+
+    th,
+    tr,
+    td {
+        text-align: center;
+        color: map-get($Colors, "negro");
+        background: map-get($backgroundColors, "claro");
+        padding: 2%;
+        border: 1px solid black;
+        margin: 20px;
+    }
+}
+
+.footerCatalogo {
+    background: map-get($backgroundColors, "azul-oscuro");
+    color: map-get($Colors, "blanco");
+    text-align: center;
+    padding: 2rem;
+}
+
+.footerCatalogo a {
+    color: map-get($Colors, "negro");
+}
+
+/*Catalago_________*/
+
+/*About Us_________*/
+.bodyAbout {
+    background: map-get($backgroundColors, "blanco");
+    margin: 0;
+}
+
+.headerAbout {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: map-get($backgroundColors, "claro");
+    height: 150px;
+    align-items: center;
+
+    .title_aboutus {
+        @include titles-size-style();
+        color: map-get($Colors, "blanco");
+        font-family: map-get($FontsFamilys, "Aboreto");
+    }
+
+}
+
+.sectionAbout {
+    margin: 50px;
+
+    .legend {
+        background: map-get($backgroundColors, "azul-oscuro");
+        width: auto;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 0px black;
+    }
+
+    fieldset {
+        background: map-get($backgroundColors, "Rojo-claro");
+        padding: 30px;
+        font-weight: bolder;
+        box-shadow: 10px 20px rgba(0, 0, 0, 0.305);
+        color: map-get($Colors, "blanco");
+        font-weight: bolder;
+        font-size: 25px;
+        font-family: map-get($FontsFamilys, "Alumini Sans");
+    }
+}
+
+.footerAbout {
+    margin-top: 230px;
+    background: map-get($backgroundColors, "azul-oscuro");
+    color: map-get($Colors, "blanco");
+    text-align: center;
+    padding: 2rem;
+}
+
+.footerAbout a {
+    color: map-get($Colors, "negro");
+}
+
+/*About Us_________*/
+
+
+@media all and (max-width: 467px) {
+    .header {
+        padding: 20px;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .main {
+        height: 100%;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .headerTragos {
+        height: 200px;
+        justify-content: center;
+    }
+
+    .headerContact {
+        height: 200px;
+        justify-content: center;
+    }
+
+    .headerAbout {
+        height: 200px;
+        justify-content: center;
+    }
+
+    .conteinerfooter {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 5px;
+    }
+
+
+}
+
+@media all and (min-width: 720px) {
+    .header {
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .main {
+        height: 100px;
+        justify-content: space-between;
+    }
+
+    .headerTragos {
+        height: 100px;
+        justify-content: space-between;
+    }
+
+    .headerContact {
+        height: 100px;
+        justify-content: space-between;
+    }
+
+    .headerAbout {
+        height: 100px;
+        justify-content: space-between;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        flex-flow: row nowrap;
+        gap: 25px;
+        
+    }
+
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
