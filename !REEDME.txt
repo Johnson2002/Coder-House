@@ -1,0 +1,12 @@
+Blog-wisconsin
+	Un blog creado por fans de los licores destilados o mejor dichos whiskeys
+	consta de 5 enlaces /home/catalogo/tragos/sobre nosotros/contacto
+	
+	Los estilos estan compilados por Sass a travez de un archvio SCSS
+
+	Esta maquetado junto con boostrap y maquetado a mano
+
+	Fuentes extraidas de googleFonts
+
+	<Keywords> BLOG, Whiskey, FORO, ESCOCIA, JACK DANIELS, LICORES
+	JAMESON, IRLANDA, ESTADOS UNIDOS, JOHNNIE WALKER, 
