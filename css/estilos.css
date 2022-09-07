@@ -16,7 +16,7 @@
 
 .header {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   background: #D92525;
   height: 150px;
@@ -26,7 +26,6 @@
 .header .title_index {
   font-size: 3rem;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.716);
-  margin-left: 30px;
   font-weight: lighter;
   font-family: "Aboreto";
   color: white;
@@ -141,6 +140,31 @@
   box-shadow: 10px 10px 0 black;
 }
 
+.welcome {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 30px;
+  margin-top: 30px;
+  width: auto;
+}
+.welcome h2 {
+  background-color: #D92525;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 gray;
+}
+.welcome p {
+  background-color: #044040;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 gray;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -149,7 +173,7 @@
   flex-flow: column nowrap;
   gap: 25px;
   height: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   animation-name: aparecer;
   animation-duration: 2s;
   animation-iteration-count: 1;
@@ -160,13 +184,13 @@
   color: white;
   background-size: cover;
   background-color: #044040;
-  box-shadow: 10px 10px 5px black;
-  width: 100%;
+  box-shadow: 10px 10px 0 rgb(72, 72, 72);
+  width: 60%;
   height: auto;
 }
 .container .cards:hover {
-  transform: scale(1.2);
-  transition: all 1s ease-in-out;
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
 }
 
 .conteinerfooter {
@@ -199,11 +223,11 @@
   background: #D92525;
   height: 150px;
   align-items: center;
+  padding: 30px;
 }
 .headerTragos .title_tragos {
   font-size: 3rem;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.716);
-  margin-left: 30px;
   font-weight: lighter;
   color: white;
   font-family: "Aboreto";
@@ -305,19 +329,25 @@
 
 .headerContact {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   background: #D92525;
   height: 150px;
   align-items: center;
+  padding: 30px;
 }
 .headerContact .title_contactanos {
   font-size: 3rem;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.716);
-  margin-left: 30px;
   font-weight: lighter;
   color: white;
   font-family: "Aboreto";
+}
+.headerContact .nav {
+  gap: 10px;
+  animation-name: aparecer;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
 }
 
 .mainContactanos {
@@ -414,7 +444,6 @@
 .main .title_catalogo {
   font-size: 3rem;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.716);
-  margin-left: 30px;
   font-weight: lighter;
   color: white;
   font-family: "Aboreto";
@@ -466,7 +495,6 @@
 
 .h4Americana:hover {
   color: black;
-  background-image: url(../images/united_states_flag.png);
   transition: all 0.3s ease;
   animation-name: aparecer;
   animation-duration: 2s;
@@ -486,7 +514,6 @@
 
 .h4Escosesa:hover {
   color: black;
-  background-image: url(../images/scothis_flag.jpg);
   background-size: cover;
   transition: all 0.3s ease;
   animation-name: aparecer;
@@ -507,7 +534,6 @@
 .h4Irlandesa:hover {
   color: black;
   transition: all 0.3s ease;
-  background-image: url(../images/irish_flag.png);
   background-size: cover;
   animation-name: aparecer;
   animation-duration: 2s;
@@ -571,13 +597,15 @@
 .headerAbout .title_aboutus {
   font-size: 3rem;
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.716);
-  margin-left: 30px;
   font-weight: lighter;
   color: white;
   font-family: "Aboreto";
 }
 
 .sectionAbout {
+  display: grid;
+  grid-template-columns: 2fr;
+  width: fit-content;
   margin: 50px;
 }
 .sectionAbout .legend {
@@ -597,6 +625,9 @@
   font-size: 25px;
   font-family: "Alumni Sans Pinstripe";
 }
+.sectionAbout fieldset img {
+  width: 100%;
+}
 
 .footerAbout {
   margin-top: 230px;
@@ -611,64 +642,57 @@
 }
 
 /*About Us_________*/
-@media all and (max-width: 467px) {
+@media all and (max-width: 480px) {
   .header {
-    padding: 20px;
-    height: 100%;
-    justify-content: center;
-  }
-  .main {
-    height: 100%;
-    padding: 20px;
-    justify-content: center;
-  }
-  .headerTragos {
+    display: flex;
+    flex-flow: row wrap;
     height: 200px;
-    justify-content: center;
-  }
-  .headerContact {
-    height: 200px;
-    justify-content: center;
-  }
-  .headerAbout {
-    height: 200px;
-    justify-content: center;
   }
   .conteinerfooter {
     display: flex;
-    flex-flow: column wrap;
-    gap: 5px;
-  }
-}
-@media all and (min-width: 720px) {
-  .header {
-    height: 100%;
-    justify-content: space-between;
-  }
-  .main {
-    height: 100px;
-    justify-content: space-between;
+    flex-flow: column nowrap;
+    gap: 0;
   }
   .headerTragos {
-    height: 100px;
-    justify-content: space-between;
+    height: 200px;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .mainTitle {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  .mainTitle .subTitle {
+    display: flex;
+    flex-flow: row nowrap;
   }
   .headerContact {
-    height: 100px;
-    justify-content: space-between;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 200px;
   }
   .headerAbout {
-    height: 100px;
-    justify-content: space-between;
+    height: 200px;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 30px;
   }
+}
+@media all and (min-width: 1200px) {
   .container {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-bottom: 30px;
-    padding-top: 30px;
     flex-flow: row nowrap;
-    gap: 25px;
+  }
+  .cards {
+    width: 60%;
+  }
+  .headerContact {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 200px;
   }
 }
 @keyframes aparecer {
