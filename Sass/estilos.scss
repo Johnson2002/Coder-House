@@ -4,30 +4,28 @@
     font-weight: lighter;
 }
 
-/*Backgrounds-colors_________*/
+
 $backgroundColors: ("claro": #D92525,
     "oscuro": #260101,
     "blanco": #F2F2F2,
     "azul-oscuro": #044040,
     "Rojo-claro":#F23030,
 );
-/*Backgrounds-colors_________*/
 
-/*Fuentes____________________*/
+
+
 $FontsFamilys: ("Alumini Sans": 'Alumni Sans Pinstripe',
     "Roboto mono": 'Roboto Mono',
     "Aboreto": 'Aboreto',
     "Kanit": 'Kanit',
 );
-/*Fuentes____________________*/
 
-/*colors_____________________*/
 $Colors: ("blanco": white,
     "negro": black,
     "Rojo": #BD2A2E,
     "gris": #3B3936,
 );
-/*colors_____________________*/
+
 
 * {
     margin: 0;
@@ -56,15 +54,18 @@ $Colors: ("blanco": white,
         animation-duration: 2s;
         animation-iteration-count: 1;
     }
+}
+
+.nav-container {
+    background-color: map-get($backgroundColors, "azul-oscuro" );
+    display: flex;
+    flex-flow: row wrap;
+    padding: 25px;
 
     .nav {
-        gap: 10px;
-        animation-name: aparecer;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
+        gap: 20px;
+        width: 100%;
     }
-
-
 }
 
 #catalogo {
@@ -72,7 +73,7 @@ $Colors: ("blanco": white,
     text-decoration: none;
     background: map-get($backgroundColors, "blanco");
     border: 3px solid white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px;
     box-shadow: 0 0 10px black;
 }
@@ -81,10 +82,10 @@ $Colors: ("blanco": white,
     background: map-get($backgroundColors, "Rojo-claro");
     color: map-get($Colors, "blanco");
     border: white 3px solid;
-    padding: 10px;
+    transform: scale(1.2);
     transition: all .3s ease;
     font-style: italic;
-    box-shadow: 10px 10px 0 black;
+    box-shadow: 0px 0px 10px white;
 }
 
 #tragos {
@@ -92,7 +93,7 @@ $Colors: ("blanco": white,
     text-decoration: none;
     background: map-get($backgroundColors, "blanco");
     border: 3px solid white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px;
     box-shadow: 0 0 10px black;
 }
@@ -101,10 +102,10 @@ $Colors: ("blanco": white,
     background: map-get($backgroundColors, "Rojo-claro");
     color: map-get($Colors, "blanco");
     border: white 3px solid;
-    padding: 10px;
+    transform: scale(1.2);
     transition: all .3s ease;
     font-style: italic;
-    box-shadow: 10px 10px 0 black;
+    box-shadow: 0px 0px 10px white;
 }
 
 #contactanos {
@@ -112,7 +113,7 @@ $Colors: ("blanco": white,
     text-decoration: none;
     background: map-get($backgroundColors, "blanco");
     border: 3px solid white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px;
     box-shadow: 0 0 10px black;
 }
@@ -121,10 +122,10 @@ $Colors: ("blanco": white,
     background: map-get($backgroundColors, "Rojo-claro");
     color: map-get($Colors, "blanco");
     border: white 3px solid;
-    padding: 10px;
+    transform: scale(1.2);
     transition: all .3s ease;
     font-style: italic;
-    box-shadow: 10px 10px 0 black;
+    box-shadow: 0px 0px 10px white;
 }
 
 #aboutus {
@@ -132,7 +133,7 @@ $Colors: ("blanco": white,
     text-decoration: none;
     background: map-get($backgroundColors, "blanco");
     border: 3px solid white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px;
     box-shadow: 0 0 10px black;
 }
@@ -141,10 +142,10 @@ $Colors: ("blanco": white,
     background: map-get($backgroundColors, "Rojo-claro");
     color: map-get($Colors, "blanco");
     border: white 3px solid;
-    padding: 10px;
+    transform: scale(1.2);
     transition: all .3s ease;
     font-style: italic;
-    box-shadow: 10px 10px 0 black;
+    box-shadow: 0px 0px 10px white;
 }
 
 
@@ -153,7 +154,7 @@ $Colors: ("blanco": white,
     text-decoration: none;
     background: map-get($backgroundColors, "blanco");
     border: 3px solid white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px;
     box-shadow: 0 0 10px black;
 
@@ -163,10 +164,10 @@ $Colors: ("blanco": white,
     background: map-get($backgroundColors, "Rojo-claro");
     color: map-get($Colors, "blanco");
     border: white 3px solid;
-    padding: 10px;
+    transform: scale(1.2);
     transition: all .3s ease;
     font-style: italic;
-    box-shadow: 10px 10px 0 black;
+    box-shadow: 0px 0px 10px white;
 }
 
 .welcome {
@@ -266,11 +267,16 @@ $Colors: ("blanco": white,
 
 }
 
-.nav {
-    gap: 10px;
-    animation-name: aparecer;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
+.nav-container {
+    background-color: map-get($backgroundColors, "azul-oscuro" );
+    display: flex;
+    flex-flow: row wrap;
+    padding: 25px;
+
+    .nav {
+        gap: 20px;
+        width: 100%;
+    }
 }
 
 .mainTitle {
@@ -368,7 +374,7 @@ $Colors: ("blanco": white,
     flex-flow:row nowrap;
     justify-content: space-between;
     background: map-get($backgroundColors, "claro");
-    height: 150px;
+    height: 100px;
     align-items: center;
     padding: 30px;
 
@@ -742,6 +748,18 @@ $Colors: ("blanco": white,
         display: flex;
         flex-flow: column nowrap;
         padding: 30px;
+    }
+
+    .nav-container {
+        background-color: map-get($backgroundColors, "azul-oscuro" );
+        display: flex;
+        flex-flow: column wrap;
+        padding: 25px;
+    
+        .nav {
+            gap: 20px;
+            width: 100%;
+        }
     }
 
 }
